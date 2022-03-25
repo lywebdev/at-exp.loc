@@ -1,0 +1,25 @@
+.page-title {
+  font-size: 65px;
+  font-weight: bold;
+}
+.page-title--white {
+  color: #fff;
+}
+
+$paragraph-size: 24px;
+
+.paragraph {
+  font-size: $paragraph-size;
+}
+
+.paragraph--light {
+  font-weight: lighter;
+  line-height: 135%;
+}
+
+.paragraph--white {
+  color: #fff;
+}
+.paragraph--ls {
+  letter-spacing: 7px;
+}

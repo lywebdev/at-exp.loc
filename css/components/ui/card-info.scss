@@ -1,0 +1,39 @@
+.card-info {
+  min-width: 230px;
+  background: #fff;
+  color: $color-black;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+  padding: 17px 26px;
+  box-sizing: border-box;
+}
+
+.card-info__header {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+}
+
+.card-info__icon {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.card-info__info {
+  margin-top: 10px;
+  color: $color-gray_light;
+}
+
+@media screen and (max-width: 1360px) {
+
+  .card-info__header {
+    font-size: 24px;
+  }
+
+  .card-info__info {
+    font-size: 14px;
+  }
+}

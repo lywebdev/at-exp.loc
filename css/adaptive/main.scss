@@ -1,0 +1,29 @@
+// xxl 1400
+@media screen and (min-width: 1400px) {
+  @import 'xxl';
+}
+
+// xl 1200
+@media screen and (max-width: 1399px) {
+  @import 'xl';
+}
+
+// lg 992
+@media screen and (max-width: 1199px) {
+  @import 'lg';
+}
+
+// md 768
+@media screen and (max-width: 991px) {
+  @import 'md';
+}
+
+// sm 576
+@media screen and (max-width: 767px) {
+  @import 'sm';
+}
+
+// x-small (none)
+@media screen and (max-width: 575px) {
+  @import 'mobile';
+}

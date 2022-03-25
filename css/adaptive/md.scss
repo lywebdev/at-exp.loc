@@ -1,0 +1,11 @@
+// Sortable in home page
+.first-screen__sortable--4 {
+
+  .sortable__items {
+
+    .col-md-6:nth-child(3),
+    .col-md-6:nth-child(4) {
+      margin-top: 15px;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+// Sortable in home page
+.first-screen__sortable--4 {
+
+  //.sortable__items {
+  //
+  //  >.col-xs-12 {
+  //    margin-top: 0;
+  //
+  //    &:not(:last-child) {
+  //      margin-bottom: 15px;
+  //    }
+  //  }
+  //}
+}
+
+.first-screen {
+
+  .first-screen__bg {
+    height: 100vh;
+    //width: 100%;
+  }
+
+  .first-screen__options {
+    margin-top: 65px;
+  }
+
+  .first-screen__filters {
+    .form-input {
+      margin-bottom: 16px;
+    }
+
+    .first-screen__filters__btn {
+      margin-top: 4px;
+      font-size: 16px;
+    }
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .first-screen__filters--area,
+  .first-screen__filters--cost {
+
+    input {
+      margin-bottom: 16px;
+    }
+  }
+
+  .selling-text {
+    margin-top: 30px;
+
+    .paragraph {
+      font-size: 16px;
+    }
+
+    h1 {
+      font-size: 14px;
+    }
+
+    .page-title {
+      font-size: 24px;
+    }
+  }
+
+  .first-screen__ads-number {
+    margin: 28px 45px 0 45px;
+    width: calc(100% - 90px);
+    box-sizing: border-box;
+  }
+
+  .sortable {
+
+    .sortable__items {
+
+
+      .sortable__item--selected {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .sortable__selected-icon {
+          display: inline-block;
+          margin-left: 10px;
+        }
+      }
+
+      .col-xs-12:not(:first-child) {
+        display: none;
+      }
+    }
+  }
+}

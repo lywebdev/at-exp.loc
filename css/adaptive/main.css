@@ -1,0 +1,5 @@
+@media screen and (min-width: 1400px) {
+  * {
+    outline: 1px solid red;
+  }
+}
