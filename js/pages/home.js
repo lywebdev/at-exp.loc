@@ -48,12 +48,35 @@ document.addEventListener('DOMContentLoaded', () => {
         if (sectionSliders[i].classList.contains('section-benefits')) {
             let swiperSlider = new Swiper(slider, {
                 slidesPerView: 8,
-                centerInsufficientSlides: true,
+                // centerInsufficientSlides: true,
+                centeredSlides: false,
                 spaceBetween: 18,
                 navigation: {
                     nextEl: nextBtn,
                     prevEl: prevBtn,
                 },
+                breakpoints: {
+                    100: {
+                        slidesPerView: 1.1,
+                        centeredSlides: true,
+                        spaceBetween: 10,
+                    },
+                    800: {
+                        slidesPerView: 4
+                    },
+                    1200: {
+                        slidesPerView: 5,
+                        centeredSlides: false
+                    },
+                    1300: {
+                        slidesPerView: 6,
+                        centeredSlides: false
+                    },
+                    1751: {
+                        slidesPerView: 8,
+                        centeredSlides: false
+                    }
+                }
             });
         }
         else if (sectionSliders[i].classList.contains('agents-section')) {

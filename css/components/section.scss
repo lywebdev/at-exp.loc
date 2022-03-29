@@ -25,15 +25,6 @@
   .section__card {
     max-width: 210px;
   }
-
-  .swiper {
-
-    .swiper-wrapper {
-    }
-  }
-
-  .swiper .swiper-slide {
-  }
 }
 
 .section-slider {
@@ -70,9 +61,9 @@
     }
 
     .swiper-wrapper {
-      padding: 10px 10px;
-      margin-left: -10px;
-      margin-right: -10px;
+      //padding: 10px 10px;
+      //margin-left: -10px;
+      //margin-right: -10px;
     }
   }
 
@@ -247,10 +238,6 @@
 // Секция подборок
 .collections-section {
 
-  .swiper-slide {
-    height: calc((100% - 30px) / 2) !important;
-  }
-
   .collections-section__container {
     max-width: 1920px;
     margin: 0 auto;
@@ -271,12 +258,6 @@
 
     .swiper-wrapper {
       width: 100%;
-      padding: unset !important;
-      margin: unset !important;
-    }
-    .swiper-slide {
-      height: unset !important;
-      width: unset !important;
     }
   }
 }

@@ -98,7 +98,7 @@
 }
 
 .room__photo-item {
-  width: 100%;
+  width: 100% !important;
   height: 100%;
 
   img {
@@ -276,4 +276,15 @@
   font-size: 14px;
   line-height: 130%;
   max-width: 350px;
+}
+
+
+.estate-object-photos-slider {
+  .swiper {
+    padding: unset !important;
+
+    &:before, &:after {
+      display: none;
+    }
+  }
 }

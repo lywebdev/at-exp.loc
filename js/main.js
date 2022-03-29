@@ -5,48 +5,127 @@ const listeners = {
 
 };
 
-const startSlider = {
-    rooms: (slider, device) => {
-        let estatesObjectsPhotosSliders = slider.querySelectorAll('.estate-object-photos-slider');
-        for (let i = 0; i < estatesObjectsPhotosSliders.length; i++) {
-            let photoSlider = estatesObjectsPhotosSliders[i];
-            let prevBtn = photoSlider.querySelector('.room__photos-nav__prev');
-            let nextBtn = photoSlider.querySelector('.room__photos-nav__next');
+// ЗАДАЧА В ТОМ, ЧТОБЫ ДО ИНИЦИАЛИЗАЦИИ СФОРМИРОВАТЬ ШАБЛОНЫ СЛАЙДЕРОВ. ЗАПИСЫВАЕМ ШАБЛОН, ДАЛЕЕ - РЕНДЕРИМ И ИНИТИМ
 
-            let initSlider = new Swiper(photoSlider, {
-                slidesPerView: 1,
-                loop: false,
-                navigation: {
-                    nextEl: nextBtn,
-                    prevEl: prevBtn,
-                },
+const slidersTemplates = {};
+const startSlider = {
+    rooms: () => {
+        function initPhotoGallery() {
+            let estatesObjectsPhotosSliders = document.querySelectorAll('.estate-object-photos-slider');
+            for (let i = 0; i < estatesObjectsPhotosSliders.length; i++) {
+                let photoSlider = estatesObjectsPhotosSliders[i].querySelector('.swiper');
+                if (photoSlider) {
+                    let prevBtn = estatesObjectsPhotosSliders[i].querySelector('.room__photos-nav__prev');
+                    let nextBtn = estatesObjectsPhotosSliders[i].querySelector('.room__photos-nav__next');
+
+                    let initSlider = new Swiper(photoSlider, {
+                        slidesPerView: 1,
+                        loop: false,
+                        navigation: {
+                            nextEl: nextBtn,
+                            prevEl: prevBtn,
+                        },
+                    });
+                }
+            }
+        }
+
+
+        if (device.type === 'mobile') {
+            let allRoomsSliders = new Swiper('.roomsSlider .mobile-rooms-slider', {
+                slidesPerView: 1.1,
+                centeredSlides: true,
+                initialSlide: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: '.section-slider-pagination',
+                    clickable: true
+                    // dynamicBullets: true,
+                }
             });
         }
+        else if (device.type === 'pc') {
+
+        }
+
+
+        initPhotoGallery();
     }
 };
 
 
-function initSliders(device = "pc") {
+function initSliders() {
     let sliders = document.querySelectorAll('.section-slider');
     for (let i = 0; i < sliders.length; i++) {
         let slider = sliders[i];
+        if (!slidersTemplates[i]) {
+            slidersTemplates[i] = {};
+        }
 
         if (slider.classList.contains('roomsSlider')) {
-            startSlider.rooms(slider, device);
+            /**
+             * needRerender - отвечает, нужно ли обрабатывать текущий слайдер на разных типах девайсов
+             */
+            slidersTemplates[i].needRerender = true;
+            if (!(slidersTemplates[i].template)) {
+                slidersTemplates[i].node = slider; // Пишем ноду в объект, чтобы можно было к ней стучаться
+
+                let pc     = slider.innerHTML;
+                let mobile = ``;
+
+                // mobile
+                let sliderTitle = slider.querySelector('.section__title');
+                let slidesEls   = slider.querySelectorAll('.room');
+
+                mobile += sliderTitle.outerHTML;
+                mobile += `<div class="collections-section__container"><div class="swiper mobile-rooms-slider"><div class="swiper-wrapper">`;
+                for (let j = 0; j < slidesEls.length; j++) {
+                    mobile += `<div class="swiper-slide">${slidesEls[j].outerHTML}</div>`;
+                }
+                mobile += `</div>
+
+                    <div class="section-slider-pagination"></div>
+
+                </div></div>`;
+
+
+                slidersTemplates[i].template = {
+                    pc: pc,
+                    mobile: mobile
+                };
+            }
         }
     }
+    console.log(slidersTemplates);
+    for (let key in slidersTemplates) {
+        if (slidersTemplates[key].needRerender) {
+            let slider = slidersTemplates[key].node;
+
+            slider.innerHTML = slidersTemplates[key].template[device.type];
+        }
+    }
+
+    startSlider.rooms();
 }
+
 
 const helper = {
     hooks: {
         setMobileVersion: () => {
+            let app = document.querySelector('#app');
+            app.classList.remove('pc');
+            app.classList.add('mobile');
             // Должны вызвать функцию инициализации слайдера, передав параметр - тип девайса.
             // Мы вызываем инициализацию слайдера из этого хука.
             // В зависимости от типа девайса отдаем разную версию шаблона. Генерим мобильный из пк версии, а пкшный просто копируем
-            initSliders(device);
+            initSliders();
         },
         setPcVersion: () => {
-            initSliders(device);
+            let app = document.querySelector('#app');
+            app.classList.remove('mobile');
+            app.classList.add('pc');
+
+            initSliders();
         }
     }
 };
@@ -306,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (device.type === 'pc' && !headerEl.classList.contains('pc')) {
             helper.hooks.setPcVersion();
         }
-        else if (device.type === 'pc' && !footerEl.classList.contains('pc')) {
+        else if (device.type === 'mobile' && !footerEl.classList.contains('mobile')) {
             helper.hooks.setMobileVersion();
         }
 

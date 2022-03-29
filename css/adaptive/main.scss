@@ -27,3 +27,25 @@
 @media screen and (max-width: 575px) {
   @import 'mobile';
 }
+
+
+@media screen and (max-width: 1780px) {
+  .section-slider__container {
+    .swiper {
+      padding-left: 15px;
+      padding-right: 15px;
+
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+
+  .section-benefits {
+
+    .collections-section__container {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+  }
+}

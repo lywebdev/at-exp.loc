@@ -1560,6 +1560,7 @@ body {
 .section-benefits .section__card {
   max-width: 210px;
 }
+
 .section-slider .swiper {
   padding: 10px 70px;
   width: 100%;
@@ -1586,11 +1587,6 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: unset;
-}
-.section-slider .swiper .swiper-wrapper {
-  padding: 10px 10px;
-  margin-left: -10px;
-  margin-right: -10px;
 }
 .section-slider .swiper-wrapper--scrollable {
   margin-bottom: 20px;
@@ -1770,9 +1766,6 @@ body {
   background: #AA0001 !important;
 }
 
-.collections-section .swiper-slide {
-  height: calc((100% - 30px) / 2) !important;
-}
 .collections-section .collections-section__container {
   max-width: 1920px;
   margin: 0 auto;
@@ -1792,12 +1785,6 @@ body {
 }
 .collections-section .room__photos .swiper-wrapper {
   width: 100%;
-  padding: unset !important;
-  margin: unset !important;
-}
-.collections-section .room__photos .swiper-slide {
-  height: unset !important;
-  width: unset !important;
 }
 
 .collections-section__more {
@@ -2016,7 +2003,7 @@ body {
 }
 
 .room__photo-item {
-  width: 100%;
+  width: 100% !important;
   height: 100%;
 }
 .room__photo-item img {
@@ -2205,8 +2192,18 @@ body {
   max-width: 350px;
 }
 
+.estate-object-photos-slider .swiper {
+  padding: unset !important;
+}
+.estate-object-photos-slider .swiper:before, .estate-object-photos-slider .swiper:after {
+  display: none;
+}
+
 .blog-post {
   color: #212137;
+}
+.blog-post .faq {
+  margin-top: 50px;
 }
 
 .blog-post__header {
@@ -3711,6 +3708,85 @@ body {
         -ms-grid-row-align: center;
         align-self: center;
   }
+
+  #app.mobile .collections-section {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #app.mobile .section-slider .swiper {
+    padding: unset !important;
+  }
+  #app.mobile .section-slider .swiper:before, #app.mobile .section-slider .swiper:after {
+    display: none;
+  }
+  #app.mobile .room__photos-items .swiper-slide {
+    width: 100% !important;
+  }
+  #app.mobile .room__photos-items:after {
+    display: none;
+  }
+  #app.mobile .room__photos-items:before {
+    display: none;
+  }
+  #app.mobile .room__overlay {
+    display: none;
+  }
+
+  .collections-section__container {
+    padding-left: unset !important;
+    padding-right: unset !important;
+    margin: unset !important;
+    max-width: unset !important;
+    width: 100%;
+  }
+  .collections-section__container .mobile-rooms-slider {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .room__btns .btn--no-bg {
+    margin-top: 10px;
+  }
+
+  .section {
+    margin-top: 40px;
+  }
+  .section.roomsSlider .section__title {
+    padding: 0 15px;
+  }
+
+  #app.mobile .section-benefits {
+    padding-top: 35px;
+    padding-bottom: 40px;
+  }
+  #app.mobile .section-benefits .section__card {
+    max-width: unset;
+  }
+  #app.mobile .section-benefits .section__title {
+    text-align: center;
+  }
+  #app.mobile .section-benefits .section-slider__navigation {
+    display: none;
+  }
+  #app.mobile .section-benefits .swiper {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .room__photos .room__photos-nav__prev {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    margin-left: 20px;
+  }
+  .room__photos .room__photos-nav__next {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    margin-right: 20px;
+  }
 }
 @media screen and (max-width: 991px) {
   .first-screen__sortable--4 .sortable__items .col-md-6:nth-child(3),
@@ -3837,5 +3913,19 @@ body {
   .collections-section__more {
     margin-top: 20px;
     font-size: 18px;
+  }
+}
+@media screen and (max-width: 1780px) {
+  .section-slider__container .swiper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .section-slider__container .swiper:before, .section-slider__container .swiper:after {
+    display: none;
+  }
+
+  .section-benefits .collections-section__container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 }
