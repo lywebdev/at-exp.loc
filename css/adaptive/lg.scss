@@ -1,0 +1,56 @@
+.feedback-banner {
+
+  &.mt {
+    margin-top: 40px;
+  }
+}
+
+.feedback-banner__main {
+  flex-direction: column;
+}
+
+.feedback-banner__info {
+  width: 100%;
+  text-align: center;
+
+  p {
+    font-size: 16px;
+  }
+
+  .mobile-div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.feedback-banner__bg {
+
+  &:before {
+    background: rgba(33,33,55, 0.65);
+  }
+
+  &:after {
+    display: none;
+  }
+}
+
+.feedback-banner__title {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feedback-banner__form {
+  width: 100%;
+  margin-top: 20px;
+  justify-content: center;
+
+  .form {
+    padding: 27px 20px 25px 20px;
+  }
+
+  .form__submit {
+    margin-top: 20px;
+    align-self: center;
+  }
+}

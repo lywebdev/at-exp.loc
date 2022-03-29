@@ -1,0 +1,34 @@
+.agent-card {
+  height: 439px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.agent-card__image {
+  height: 100%;
+  width: 100%;
+}
+.agent-card__image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.agent-card__overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.agent-card__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}

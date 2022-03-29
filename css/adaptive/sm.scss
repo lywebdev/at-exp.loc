@@ -1,16 +1,5 @@
 // Sortable in home page
 .first-screen__sortable--4 {
-
-  //.sortable__items {
-  //
-  //  >.col-xs-12 {
-  //    margin-top: 0;
-  //
-  //    &:not(:last-child) {
-  //      margin-bottom: 15px;
-  //    }
-  //  }
-  //}
 }
 
 .first-screen {
@@ -68,26 +57,102 @@
     width: calc(100% - 90px);
     box-sizing: border-box;
   }
+}
 
-  .sortable {
+.sortable {
 
-    .sortable__items {
+  .sortable__items {
 
-
-      .sortable__item--selected {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        .sortable__selected-icon {
-          display: inline-block;
-          margin-left: 10px;
-        }
-      }
-
-      .col-xs-12:not(:first-child) {
-        display: none;
-      }
+    .col-xs-12:not(:first-child) {
+      display: none;
     }
   }
+}
+
+.sortable__item--selected {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .sortable__selected-icon {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+
+// blog
+.post {
+  height: 230px !important;
+  margin-bottom: 20px;
+}
+
+.post__title {
+  font-size: 18px !important;
+}
+
+.articles-section__post-container {
+  margin-bottom: -20px;
+}
+
+// Section
+.section__title {
+  font-size: 22px !important;
+  margin-bottom: 20px;
+}
+
+// services section
+.services-section {
+  padding-top: 36px;
+  padding-bottom: 36px;
+
+  .section__title {
+    text-align: center;
+  }
+
+  .service-card {
+
+    &:before {
+      top: unset !important;
+      bottom: 0 !important;
+      //box-shadow: 0 14px 24px 54px white !important;
+    }
+  }
+
+  .services-section__container {
+    margin: unset !important;
+    padding: unset !important;
+    margin-bottom: -20px;
+
+    .col-md-12 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .service-card__image {
+    position: absolute;
+    height: 100%;
+  }
+}
+
+.service-card__main {
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
+.service-card__name {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.service-card__description {
+  font-size: 14px;
+}
+
+
+
+
+.collections-section__more {
+  margin-top: 20px;
+  font-size: 18px;
 }

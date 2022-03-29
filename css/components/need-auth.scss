@@ -1,0 +1,33 @@
+.need-auth {
+  background: $color-gray_lighter;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 27px 22px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.need-auth__avatar {
+  margin-right: 30px;
+  margin-left: 10px;
+}
+
+.need-auth__text {
+  color: $color-black;
+  line-height: 135%;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: $color-red;
+    text-decoration: underline;
+
+    &:hover {
+      opacity: 0.8
+    }
+  }
+}

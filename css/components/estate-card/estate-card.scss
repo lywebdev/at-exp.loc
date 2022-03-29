@@ -1,0 +1,219 @@
+.estate-card {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 35px;
+}
+
+.ec-grid {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+
+// slider
+.ec-slider {
+
+  .slide__bg {
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.ec-slider__main {
+  height: 547px;
+  width: 100%;
+  position: relative;
+
+  .ec-slider__main__navigation {
+    margin: 20px;
+  }
+
+  .btn__item {
+    height: 45px;
+    width: 45px;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  .btn__prev {
+
+    svg {
+      transform: rotate(180deg);
+      margin-right: 2px;
+    }
+  }
+
+  .btn__next {
+    svg {
+      margin-left: 4px;
+    }
+  }
+
+  .swiper {
+    height: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+}
+.ec-slider__main__slide {
+  position: relative;
+  height: 100%;
+
+  .slide__bg {
+    height: 100%;
+  }
+
+  .slide__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: flex-start;
+    padding: 20px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    .btn--white {
+      margin-top: auto;
+    }
+  }
+}
+
+.ec-slider__main__navigation {
+  position: absolute;
+  height: 45px;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+}
+
+
+
+
+
+$slideThumbHeight: 172px;
+
+.ec-slider__thumbs {
+  height: 172px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.ec-slider__thumbs__slide {
+  height: 172px;
+  border-radius: 25px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+$slideThumbNavItemWidth: 35px;
+.ec-slider__thumbs__navigation {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  top: calc((#{$slideThumbHeight} / 2) - (35px / 2));
+
+  .btn__item {
+    top: 0;
+    height: 35px;
+    width: 35px;
+    z-index: 5;
+    position: absolute;
+    //top: calc((#{$slideThumbHeight} / 2) - (35px / 2));
+  }
+
+  .btn__prev {
+    margin-left: calc((#{$slideThumbNavItemWidth} / 2) * (-1));
+    left: 0;
+  }
+
+  .btn__next {
+    margin-right: calc((#{$slideThumbNavItemWidth} / 2) * (-1));
+    right: 0;
+
+    svg {
+      transform: rotate(180deg);
+      margin-left: 2px;
+    }
+  }
+}
+
+
+
+
+@import "ec-info";
+@import "ec-description";
+@import "ec-options";
+
+.estate-card {
+
+  .ec-info {
+    margin: 20px 0;
+  }
+
+  .ec-desc {
+    margin-bottom: 20px;
+  }
+
+  .section {
+    margin-top: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .section__title {
+      font-size: 30px;
+      margin-bottom: 23px;
+      text-transform: unset;
+    }
+  }
+
+  .services-section {
+    background: none;
+  }
+
+  .mgg-select {
+    margin-top: 20px;
+  }
+}
+
+.estate-card__map {
+  position: relative;
+}
+
+.ec-map {
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.ec-map__text {
+  font-size: 20px;
+  font-weight: bold;
+  color: $color-black;
+  position: absolute;
+  text-align: center;
+  margin-top: 10%;
+  max-width: 350px;
+}
+
+.ec-agent {}

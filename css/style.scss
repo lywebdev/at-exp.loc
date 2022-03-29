@@ -9,9 +9,9 @@ $color-gray: #F0F0F2;
 $color-gray_dark: #D5D5DA;
 $color-gray_hover: #DCDCDE;
 $color-gray_light: #7A7A87;
+$color-gray_lighter: #F8F8F9;
 $color-black: #212137;
 $color-red: #AA0001;
-
 
 
 // Fonts:
@@ -19,9 +19,19 @@ $color-red: #AA0001;
 
 $font-main: 'Manrope', sans-serif;
 
+$fullHdPadding: 70px;
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  line-height: unset !important;
+}
+
 // Grid:
   // ac - app-container
-.ac {
+.ac-grid {
   margin: 0 auto;
   width: 100%;
   height: 100%;
@@ -50,8 +60,20 @@ $font-main: 'Manrope', sans-serif;
 
 #app {
   font-family: $font-main;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+#content {
+  flex-grow: 1;
+}
+
+
+.color {}
+.color--red {
+  color: $color-red;
+}
 
 
 
@@ -60,12 +82,33 @@ $font-main: 'Manrope', sans-serif;
 @import 'components/header/header';
 @import 'components/first-screen';
 
+@import 'components/service-card';
+@import 'components/agent-card';
+@import 'components/review-card';
+@import 'components/blog/post';
+@import 'components/photo-gallery';
+@import 'components/estate-card/estate-card';
+@import 'components/mgg/mgg-select';
+
+@import 'components/section';
+@import 'components/room';
+@import 'components/need-auth';
+@import 'components/feedback-banner';
+@import 'components/footer/footer';
+
 // UI
 @import 'components/ui/dropdown';
 @import 'components/ui/btn';
 @import 'components/ui/nav-menu';
 @import 'components/ui/card-info';
+@import 'components/ui/form/form';
 @import 'components/ui/form/input';
+@import 'components/ui/accordion';
+
+@import 'components/breadcrumbs';
+
+// Pages
+@import 'pages/app-submission';
 
 // Adaptive
 @import 'adaptive/main';

@@ -23,3 +23,60 @@ $paragraph-size: 24px;
 .paragraph--ls {
   letter-spacing: 7px;
 }
+
+
+.sortable-section {}
+
+
+.mb-80 {
+  margin-bottom: 80px !important;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+.mt-30 {
+  margin-top: 30px !important;
+}
+
+.mt-25 {
+  margin-top: 25px !important;
+}
+
+.mt-15 {
+  margin-top: 15px !important;
+}
+
+.mb-15 {
+  margin-bottom: 15px !important;
+}
+
+.mb-12 {
+  margin-bottom: 12px !important;
+}
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.mr-15 {
+  margin-right: 15px;
+}
+
+
+.fs--14 {
+  font-size: 14px !important;
+
+  * {
+    font-size: 14px !important;
+  }
+}
+
+
+.delimiter {
+  margin: 25px 0;
+  background: $color-gray_lighter;
+  width: 100%;
+  height: 4px;
+}

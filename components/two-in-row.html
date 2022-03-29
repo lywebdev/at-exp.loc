@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Link Swiper's CSS -->
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!--    <link rel="stylesheet" href="libs/swiper/swiper.min.css">-->
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        .container-s {
+            height: 835px;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .room {
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .swiper-slide {
+        }
+
+        .top {
+            height: 400px;
+            background: red;
+        }
+
+        .bottom {
+            background: blue;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+<!-- Swiper -->
+<div class="container-s">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="room">
+                    <div class="top">
+                        top section
+                    </div>
+                    <div class="bottom">
+                        bottom section
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="room">
+                    <div class="top">
+                        top section
+                    </div>
+                    <div class="bottom">
+                        bottom section
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="room">
+                    <div class="top">
+                        top section
+                    </div>
+                    <div class="bottom">
+                        bottom section
+                    </div>
+                </div>
+            </div><div class="swiper-slide">
+            <div class="room">
+                <div class="top">
+                    top section
+                </div>
+                <div class="bottom">
+                    bottom section
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+.textarea {
+  @extend .input;
+
+  padding: 17px 19px;
+  min-height: 120px;
+  font-size: 14px;
+  line-height: 135%;
+}

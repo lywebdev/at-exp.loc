@@ -1,0 +1,150 @@
+.page__app-submission {
+
+  .form__submit {
+    margin-top: 35px;
+    padding: 10px 100px;
+    outline: none;
+    font-size: 18px;
+  }
+
+  .col-padding {
+    margin-top: auto;
+  }
+
+  .room-preview {
+    margin-bottom: 5px;
+  }
+
+  .sortable-section {
+    margin-bottom: 38px;
+  }
+
+  .add-layout {
+    margin-top: 19px;
+    display: none !important;
+  }
+}
+
+.app-submission__row {
+
+  .input {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+.app-submission__photos {
+
+  .section__title {
+    margin-top: 75px;
+    margin-bottom: 0;
+  }
+}
+
+.app-submission__options {
+  margin-top: 15px;
+
+  .ac {
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+
+    &.is-active {
+
+      .app-submission__options__toggle-btn svg {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  .ac-header {
+    padding: unset !important;
+    margin: unset !important;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .ac-trigger {
+    font-family: $font-main !important;
+  }
+
+  .ac-text {
+    font-family: $font-main !important;
+    padding: 45px 0 0 0 !important;
+  }
+}
+
+.app-submission__options__toggle-btn {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+
+  span {
+    font-size: 16px !important;
+    margin-left: 15px;
+    font-weight: normal;
+    color: $color-gray_light;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-left: 9px;
+      transform: rotate(180deg);
+      transition: all 0.3s;
+    }
+  }
+}
+
+.app-submission__option-section {
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+
+
+.mark-on-the-map {}
+
+.mark-on-the-map__info {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 17px;
+}
+
+.mark-on-the-map__map {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+}
+
+.app-submission__choice {
+  margin-top: 20px;
+
+  .app-submission__choice-item {
+    width: 100%;
+
+    .btn {
+      width: 95%;
+      padding-left: unset !important;
+      padding-right: unset !important;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      font-size: 14px;
+    }
+  }
+}

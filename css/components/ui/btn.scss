@@ -22,3 +22,85 @@
   background: none;
   color: $color-red;
 }
+
+.btn-square {
+  width: 60px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #F0F0F2;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+
+  svg {
+
+    path {
+      transition: all 0.3s;
+    }
+  }
+
+  &:hover {
+    background: $color-red;
+
+    svg {
+
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.btn--gray {
+  border-color: $color-gray_light !important;
+  color: $color-gray_light !important;
+  font-size: 16px !important;
+  padding: 12px 13px !important;
+  background: transparent !important;
+  display: flex !important;
+  align-items: center;
+
+  svg {
+    margin-right: 8px;
+  }
+}
+
+.btn--white {
+  background: #fff;
+  color: $color-black;
+  font-size: 16px;
+  padding: 12px 21px;
+  border-color: #fff;
+}
+
+.slider-btn {
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -1px -2px 7px 3px rgb(0 0 0 / 10%);
+  transition: all 0.3s;
+
+  &.swiper-button-disabled {
+    opacity: 0.9;
+    cursor: default;
+  }
+
+  path {
+    transition: all 0.3s;
+  }
+
+  &:hover {
+
+    &:not(.swiper-button-disabled) {
+      background: $color-red;
+
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
