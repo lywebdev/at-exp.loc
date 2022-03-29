@@ -38,6 +38,15 @@ body {
   max-width: 1780px;
 }
 
+.content-grid {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+}
+
 .f {
   display: flex;
 }
@@ -86,12 +95,14 @@ body {
 @import 'components/agent-card';
 @import 'components/review-card';
 @import 'components/blog/post';
+@import 'components/blog/faq';
 @import 'components/photo-gallery';
 @import 'components/estate-card/estate-card';
 @import 'components/mgg/mgg-select';
 
 @import 'components/section';
 @import 'components/room';
+@import 'components/blog/blog';
 @import 'components/need-auth';
 @import 'components/feedback-banner';
 @import 'components/footer/footer';
