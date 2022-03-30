@@ -132,6 +132,16 @@
   }
 }
 
+.blog-post__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    max-height: 20px;
+  }
+}
+
 
 .blog-post__author {
   display: flex;

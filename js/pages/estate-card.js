@@ -1,5 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
+let setMobile = {
+    func: () => {
+        console.log('resize');
+    }
+};
 
+let setPc = {
+    func: () => {
+        // ...
+    }
+};
+
+setMobileVersionHookFunctions.push(setMobile);
+
+document.addEventListener('DOMContentLoaded', () => {
     const thumbsSlider = new Swiper('.ec-slider__thumbs .swiper', {
         slidesPerView: 5,
         spaceBetween: 20,
@@ -18,5 +31,5 @@ document.addEventListener('DOMContentLoaded', () => {
         thumbs: {
             swiper: thumbsSlider,
         },
-    }) ;
+    });
 });

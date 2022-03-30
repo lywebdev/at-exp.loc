@@ -1535,6 +1535,84 @@ body {
   font-weight: bold;
 }
 
+.vacancy-card {
+  color: #212137;
+  border-radius: 25px;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 37px 32px;
+  -webkit-box-shadow: 0 4px 12px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 12px 3px rgba(0, 0, 0, 0.1);
+}
+
+.vacancy-card__name {
+  font-size: 24px;
+  line-height: 115%;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.vacancy-card__salary {
+  color: #AA0001;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+.vacancy-cards {
+  margin: 80px 0;
+}
+
+.vacancy-card__tasks span {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+.vacancy-card__tasks ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.vacancy-card__tasks ul li {
+  position: relative;
+  font-size: 14px;
+  padding-left: 16px;
+}
+.vacancy-card__tasks ul li:not(:last-child) {
+  margin-bottom: 14px;
+}
+.vacancy-card__tasks ul li:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  top: 7px;
+  left: 0;
+  background: #AA0001;
+}
+
+.vacancy-card__tasks-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.vacancy-card__btn {
+  margin-top: 25px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
 .section {
   margin-top: 73px;
 }
@@ -2348,6 +2426,21 @@ body {
 }
 .blog-post__footer__rs ul li:not(:last-child) {
   margin-right: 30px;
+}
+
+.blog-post__social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.blog-post__social-link svg {
+  max-height: 20px;
 }
 
 .blog-post__author {
@@ -3625,6 +3718,11 @@ body {
   font-size: 14px;
 }
 
+@media screen and (min-width: 1px) and (max-width: 1780px) {
+  .breadcrumbs .ac-grid {
+    padding: 0 15px;
+  }
+}
 @media screen and (max-width: 1399px) {
   .footer__nav {
     -ms-flex-wrap: wrap;
@@ -3651,6 +3749,35 @@ body {
   }
 }
 @media screen and (max-width: 1199px) {
+  .breadcrumbs {
+    min-height: 130px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .breadcrumbs .ac-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .breadcrumbs__path .breadcrumbs__item {
+    color: #fff;
+    font-size: 14px;
+  }
+
+  .breadcrumbs__title {
+    font-size: 22px;
+  }
+
   .feedback-banner.mt {
     margin-top: 40px;
   }
@@ -3707,6 +3834,105 @@ body {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+  }
+
+  .blog-post {
+    border-bottom: 1px solid #E6E6E6;
+    padding-bottom: 40px;
+  }
+
+  .blog-post__header {
+    min-height: 390px;
+  }
+
+  .blog-post__description {
+    font-size: 14px;
+    padding: 35px 20px;
+  }
+
+  .blog-post__date {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-top: 35px;
+  }
+
+  .blog-post-title {
+    font-size: 24px;
+    margin-top: 18px;
+  }
+
+  .blog-post__title {
+    font-size: 22px;
+    margin-top: 36px;
+  }
+
+  .blog-post__subtitle {
+    margin-top: 23px;
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .blog-post__uploaded-image {
+    margin-top: 26px;
+  }
+
+  .blog-post__footer {
+    margin-top: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .blog-post__author {
+    max-width: unset;
+  }
+
+  .blog-post__footer__rs {
+    margin-top: 25px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .blog-post__footer__rs span {
+    margin-bottom: 15px;
+  }
+
+  .blog-post .faq {
+    margin-top: 36px;
+  }
+
+  .faq {
+    padding: 26px 20px;
+  }
+
+  .faq__title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .faq__text {
+    font-size: 14px;
+  }
+
+  .faq__subtitle {
+    font-size: 16px;
+  }
+
+  .faq__list {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  .faq__list ul li:not(:last-child) {
+    margin-bottom: 17px;
   }
 
   #app.mobile .collections-section {
@@ -3792,6 +4018,17 @@ body {
   .first-screen__sortable--4 .sortable__items .col-md-6:nth-child(3),
 .first-screen__sortable--4 .sortable__items .col-md-6:nth-child(4) {
     margin-top: 15px;
+  }
+
+  .vacancy-card {
+    position: relative;
+    padding: 35px 32px 80px 32px;
+  }
+
+  .vacancy-card__btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }
 @media screen and (max-width: 767px) {

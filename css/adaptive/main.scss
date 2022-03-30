@@ -1,3 +1,12 @@
+@media screen and (min-width: 1px) and (max-width: 1780px) {
+  .breadcrumbs {
+
+    .ac-grid {
+      padding: 0 15px;
+    }
+  }
+}
+
 // xxl 1400
 @media screen and (min-width: 1400px) {
   @import 'xxl';

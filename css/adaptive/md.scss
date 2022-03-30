@@ -9,3 +9,14 @@
     }
   }
 }
+
+.vacancy-card {
+  position: relative;
+  padding: 35px 32px 80px 32px;
+}
+
+.vacancy-card__btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

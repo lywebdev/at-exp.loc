@@ -2,10 +2,8 @@
 var device   = undefined;
 
 const listeners = {
-
 };
 
-// ЗАДАЧА В ТОМ, ЧТОБЫ ДО ИНИЦИАЛИЗАЦИИ СФОРМИРОВАТЬ ШАБЛОНЫ СЛАЙДЕРОВ. ЗАПИСЫВАЕМ ШАБЛОН, ДАЛЕЕ - РЕНДЕРИМ И ИНИТИМ
 
 const slidersTemplates = {};
 const startSlider = {
@@ -32,17 +30,20 @@ const startSlider = {
 
 
         if (device.type === 'mobile') {
-            let allRoomsSliders = new Swiper('.roomsSlider .mobile-rooms-slider', {
-                slidesPerView: 1.1,
-                centeredSlides: true,
-                initialSlide: 1,
-                spaceBetween: 10,
-                pagination: {
-                    el: '.section-slider-pagination',
-                    clickable: true
-                    // dynamicBullets: true,
-                }
-            });
+            let roomsMobileSliders = document.querySelectorAll('.roomsSlider .mobile-rooms-slider');
+            if (roomsMobileSliders.length !== 0) {
+                let allRoomsSliders = new Swiper('.roomsSlider .mobile-rooms-slider', {
+                    slidesPerView: 1.1,
+                    centeredSlides: true,
+                    initialSlide: 1,
+                    spaceBetween: 10,
+                    pagination: {
+                        el: '.section-slider-pagination',
+                        clickable: true
+                        // dynamicBullets: true,
+                    }
+                });
+            }
         }
         else if (device.type === 'pc') {
 
@@ -96,7 +97,6 @@ function initSliders() {
             }
         }
     }
-    console.log(slidersTemplates);
     for (let key in slidersTemplates) {
         if (slidersTemplates[key].needRerender) {
             let slider = slidersTemplates[key].node;
@@ -108,10 +108,17 @@ function initSliders() {
     startSlider.rooms();
 }
 
+const setMobileVersionHookFunctions = [];
+const setPcVersionHookFunctions = [];
+
 
 const helper = {
     hooks: {
         setMobileVersion: () => {
+            for (let i = 0; i < setMobileVersionHookFunctions.length; i++) {
+                setMobileVersionHookFunctions[i].func();
+            }
+
             let app = document.querySelector('#app');
             app.classList.remove('pc');
             app.classList.add('mobile');
@@ -121,6 +128,10 @@ const helper = {
             initSliders();
         },
         setPcVersion: () => {
+            for (let i = 0; i < setPcVersionHookFunctions.length; i++) {
+                setPcVersionHookFunctions[i].func();
+            }
+
             let app = document.querySelector('#app');
             app.classList.remove('mobile');
             app.classList.add('pc');
