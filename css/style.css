@@ -1741,11 +1741,15 @@ body {
 }
 
 .ui-card__icon {
-  font-size: 60px;
   color: #AA0001;
   font-weight: bold;
+  margin-bottom: 20px;
 }
-
+.ui-card__icon span {
+  font-size: 60px;
+  display: inline-block;
+  margin: -10px 0;
+}
 .ui-card__title {
   font-size: 20px;
   font-weight: bold;
