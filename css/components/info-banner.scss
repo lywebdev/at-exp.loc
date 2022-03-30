@@ -1,0 +1,49 @@
+.info-banner {
+  color: $color-black;
+  padding: 255px 0;
+  position: relative;
+}
+
+.info-banner__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.info-banner__wrapper {
+  padding: 0 150px;
+}
+
+.info-banner__title {
+  font-size: 70px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+}
+
+.info-banner__text {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.info-banner__btns {
+  margin-top: 35px;
+
+  .btn {
+    padding: 12px 112px !important;
+    font-size: 18px;
+  }
+}
