@@ -12,7 +12,6 @@
 </head>
 <body>
 <div id="app">
-
     <header class="header">
 
         <div class="header-topbar container-fluid">
@@ -191,20 +190,19 @@
 
     </header>
 
-    <div id="content">
-
+    <div id="content" class="page__buildings">
         <div class="first-screen">
 
             <div class="breadcrumbs">
                 <div class="breadcrumbs__bg">
-                    <img src="/img/breadcrumbs-photo.jpg" alt="">
+                    <img src="/img/buildings-breadcrumbs-bg.jpg" alt="">
                 </div>
                 <div class="ac-grid">
                     <div class="breadcrumbs__path">
                         <a href="#" class="breadcrumbs__item breadcrumbs__prev">Главная</a>
-                        <span class="breadcrumbs__item breadcrumbs__current">Стоимость услуг</span>
+                        <span class="breadcrumbs__item breadcrumbs__current">Новостройки</span>
                     </div>
-                    <div class="breadcrumbs__title">Стоимость услуг</div>
+                    <div class="breadcrumbs__title">Новостройки</div>
                 </div>
 
                 <div class="container-fluid first-screen__main">
@@ -297,8 +295,17 @@
 
         </div>
 
+        <section class="main">
+            <div class="main__ls">
+                <div class="estate-cards">
+                    left section
+                </div>
+            </div>
+            <div class="main__rs">
+                right section
+            </div>
+        </section>
     </div>
-
 
     <footer class="footer">
 
@@ -613,5 +620,6 @@
 <script src="/js/components/accordion.min.js"></script>
 
 <script src="/js/main.js"></script>
+<script src="/js/pages/buildings.js"></script>
 </body>
 </html>

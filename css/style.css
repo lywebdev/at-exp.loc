@@ -4511,6 +4511,25 @@ body {
   line-height: 140%;
 }
 
+.page__buildings .first-screen .breadcrumbs {
+  padding: 45px 0 95px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.page__buildings .first-screen .breadcrumbs .breadcrumbs__bg:before {
+  display: none;
+}
+.page__buildings .first-screen__filters {
+  margin-top: 54px;
+}
+
 @media screen and (min-width: 1px) and (max-width: 1780px) {
   .breadcrumbs .ac-grid {
     padding: 0 15px;

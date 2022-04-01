@@ -1,0 +1,19 @@
+.page__buildings {
+
+  .first-screen .breadcrumbs {
+
+    .breadcrumbs__bg {
+      &:before {
+        display: none;
+      }
+    }
+    padding: 45px 0 95px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .first-screen__filters {
+    margin-top: 54px;
+  }
+}
