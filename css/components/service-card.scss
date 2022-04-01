@@ -91,3 +91,26 @@
   line-height: 150%;
   z-index: 5;
 }
+
+
+.service-card--estate {
+
+  .service-card__name {
+    margin-bottom: 11px;
+  }
+
+  &:before {
+    box-shadow: 0 -10px 30px 27px white;
+  }
+}
+
+.service-card__days {}
+.service-card__cost {
+}
+
+.service-card__days,
+.service-card__cost {
+  margin-top: 20px;
+  font-size: 20px;
+  color: $color-black;
+}

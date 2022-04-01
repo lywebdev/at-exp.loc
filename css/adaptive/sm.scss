@@ -149,10 +149,32 @@
   font-size: 14px;
 }
 
+.advantages {
+  padding: 37px 0;
+}
 
+.advantages__row {
 
+  .col-sm-12 {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
 
 .collections-section__more {
   margin-top: 20px;
   font-size: 18px;
+}
+
+.advantages__row {
+
+}
+
+.advantage__title {
+  font-size: 60px;
+}
+
+.advantage__text {
+  font-size: 22px;
 }

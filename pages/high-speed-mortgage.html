@@ -191,46 +191,208 @@
 
     </header>
 
-    <div id="content" class="page page__prop-valuation">
-
-        <div class="first-screen">
-            <div class="first-screen__bg">
-                <img src="/img/page-sale__bg.jpg" alt="">
+    <div id="content" class="page__hsm">
+        <div class="breadcrumbs">
+            <div class="breadcrumbs__bg">
+                <img src="/img/breadcrumbs-photo.jpg" alt="">
             </div>
-            <div class="container-fluid first-screen__main">
+            <div class="ac-grid">
+                <div class="breadcrumbs__path">
+                    <a href="#" class="breadcrumbs__item breadcrumbs__prev">Главная</a>
+                    <span class="breadcrumbs__item breadcrumbs__current">Скоростная ипотека</span>
+                </div>
+                <div class="breadcrumbs__title">Скоростная ипотека</div>
+            </div>
+        </div>
+
+        <section class="preview">
+            <div class="container-fluid">
+                
+                <div class="preview__bg">
+                    <img src="/img/hsm.jpg" alt="">
+                </div>
+                
                 <div class="ac-grid">
-                    <div class="first-screen__wrapper">
-                        <div class="page__title">
-                            <span>Оценка всех видов</span>
-                            <span>имущества за 1 день</span>
-                        </div>
-                        <div class="page__text">
-                            <span>Услуги по оценке предоставляет компания «Бизнес </span>
-                            <span>Стандарт» - официальный партнер компании «Этажи»</span>
-                        </div>
-                        <div class="first-screen__form">
-                            <div class="first-screen__form-row jc-sb">
-                                <input type="text" class="input" placeholder="Ваше имя">
-                                <input type="text" class="input" placeholder="+7 XXX XXX XX XX">
+                    <div class="row">
+                        <div class="col-md-12 preview__wrapper">
+                            <h1 class="preview__title">
+                                <span>Одна заявка </span>
+                                <span>сразу во все банки</span>
+                            </h1>
+                            <div class="preview__info">
+                                <span>Заполните анкету на сайте </span>
+                                <span>и получите решение банка за 3 часа</span>
                             </div>
-                            <div class="first-screen__form-row">
-                                <button type="submit" class="btn">Отправить</button>
-                            </div>
-                            <div class="first-screen__form-row">
-                                <div class="agreement">Отправляя заявку, вы соглашаетесь на обработку <a href="#" class="color--red">персональных данных</a></div>
+                            <div class="preview__btn">
+                                <a href="#" class="btn">Подать заявку онлайн</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <section class="section why-trust">
+        <section class="section calc-mortgage">
             <div class="container-fluid">
                 <div class="ac-grid">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="section__title">Почему нам доверяют?</div>
+                            <div class="section__title section__title--column">
+                                <span>Узнайте ставку и ежемесячный </span>
+                                <span>платеж по ипотеке</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="hsm__mg-s row">
+                                <div class="col-md-3">
+                                    <div class="ec-desc mortgage-selection">
+                                        <div class="ec-desc__title">Подобрать ипотеку</div>
+
+                                        <div class="mgg-select__data">
+                                            <div class="mgg-select__loan-amount mgg-select__data-item">
+                                                <div class="mgg-select__data-item__title">Сумма кредита</div>
+                                                <div class="mgg-select__data-item__cost">3 000 000 〒</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row gy-4">
+                                            <div class="col-md-12 col-sm-12">
+                                                <div class="form-label">Тип недвижимости</div>
+                                                <div class="select roomType-select"></div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12">
+                                                <label class="form-label">Стоимость недвижимости</label>
+                                                <div class="mgg-input">
+                                                    <input type="text" class="input" value="5 000 000">
+                                                    <div class="mgg-input__after">〒</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12">
+                                                <label class="form-label">Первоначальный взнос</label>
+                                                <div class="mgg-input">
+                                                    <input type="text" class="input" value="3 000 000">
+                                                    <div class="mgg-input__after">〒</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12">
+                                                <label class="form-label">Срок кредита</label>
+                                                <div class="mgg-input">
+                                                    <input type="text" class="input" value="30">
+                                                    <div class="mgg-input__after">Лет</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="mgg-select__banks">
+
+                                        <div class="row gy-4">
+                                            <div class="col-md-6">
+                                                <div class="mgg-select__bank">
+                                                    <div class="mgg-select__bank-img">
+                                                        <img src="/img/banks/втб.png" alt="">
+                                                    </div>
+                                                    <div class="mgg-select__bank-main">
+                                                        <div class="mgg-select__bank-name">ВТБ</div>
+                                                        <div class="mgg-select__bank-rates">
+                                                            <div class="mgg-select__bank-rate">
+                                                                <div class="ts">Ставка</div>
+                                                                <div class="bs">от 7.7%</div>
+                                                            </div>
+                                                            <div class="mgg-select__bank-rate">
+                                                                <div class="ts">Платеж</div>
+                                                                <div class="bs">37 787 〒 / мес</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mgg-select__bank">
+                                                    <div class="mgg-select__bank-img">
+                                                        <img src="/img/banks/втб.png" alt="">
+                                                    </div>
+                                                    <div class="mgg-select__bank-main">
+                                                        <div class="mgg-select__bank-name">ВТБ</div>
+                                                        <div class="mgg-select__bank-rates">
+                                                            <div class="mgg-select__bank-rate">
+                                                                <div class="ts">Ставка</div>
+                                                                <div class="bs">от 7.7%</div>
+                                                            </div>
+                                                            <div class="mgg-select__bank-rate">
+                                                                <div class="ts">Платеж</div>
+                                                                <div class="bs">37 787 〒 / мес</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="mgg-select__bank">
+                                                    <div class="mgg-select__bank-img">
+                                                        <img src="/img/banks/втб.png" alt="">
+                                                    </div>
+                                                    <div class="mgg-select__bank-main">
+                                                        <div class="mgg-select__bank-name">ВТБ</div>
+                                                        <div class="mgg-select__bank-rates">
+                                                            <div class="mgg-select__bank-rate">
+                                                                <div class="ts">Ставка</div>
+                                                                <div class="bs">от 7.7%</div>
+                                                            </div>
+                                                            <div class="mgg-select__bank-rate">
+                                                                <div class="ts">Платеж</div>
+                                                                <div class="bs">37 787 〒 / мес</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mgg-select__bank">
+                                                    <div class="mgg-select__bank-img">
+                                                        <img src="/img/banks/втб.png" alt="">
+                                                    </div>
+                                                    <div class="mgg-select__bank-main">
+                                                        <div class="mgg-select__bank-name">ВТБ</div>
+                                                        <div class="mgg-select__bank-rates">
+                                                            <div class="mgg-select__bank-rate">
+                                                                <div class="ts">Ставка</div>
+                                                                <div class="bs">от 7.7%</div>
+                                                            </div>
+                                                            <div class="mgg-select__bank-rate">
+                                                                <div class="ts">Платеж</div>
+                                                                <div class="bs">37 787 〒 / мес</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section why-service">
+            <div class="container-fluid">
+                <div class="ac-grid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section__title">Зачем эта услуга вам?</div>
                         </div>
                     </div>
                     <div class="row gy-4">
@@ -303,117 +465,80 @@
             </div>
         </section>
 
-        <section class="section types-eval-in-company">
+        <section class="section steps-to-mg">
             <div class="container-fluid">
                 <div class="ac-grid">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="section__title">Виды оценки компании</div>
+                            <div class="section__title">Как получить ипотеку</div>
                         </div>
                     </div>
 
-                    <div class="row gy-4">
-                        <div class="col-md-3">
-                            <a href="#" class="service-card service-card--estate">
-                                <div class="service-card__image">
-                                    <img src="/img/services/1.jpg" alt="2">
-                                </div>
-                                <div class="service-card__main">
-                                    <div class="service-card__name">Недвижимость</div>
-                                    <div class="service-card__description">(квартира, дача, дом, участок)</div>
-                                    <div class="service-card__days">от 1 дня</div>
-                                    <div class="service-card__cost">от 2 500 〒</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="#" class="service-card service-card--estate">
-                                <div class="service-card__image">
-                                    <img src="/img/services/1.jpg" alt="2">
-                                </div>
-                                <div class="service-card__main">
-                                    <div class="service-card__name">Недвижимость</div>
-                                    <div class="service-card__description">(квартира, дача, дом, участок)</div>
-                                    <div class="service-card__days">от 1 дня</div>
-                                    <div class="service-card__cost">от 2 500 〒</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="#" class="service-card service-card--estate">
-                                <div class="service-card__image">
-                                    <img src="/img/services/1.jpg" alt="2">
-                                </div>
-                                <div class="service-card__main">
-                                    <div class="service-card__name">Недвижимость</div>
-                                    <div class="service-card__description">(квартира, дача, дом, участок)</div>
-                                    <div class="service-card__days">от 1 дня</div>
-                                    <div class="service-card__cost">от 2 500 〒</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="#" class="service-card service-card--estate">
-                                <div class="service-card__image">
-                                    <img src="/img/services/1.jpg" alt="2">
-                                </div>
-                                <div class="service-card__main">
-                                    <div class="service-card__name">Недвижимость</div>
-                                    <div class="service-card__description">(квартира, дача, дом, участок)</div>
-                                    <div class="service-card__days">от 1 дня</div>
-                                    <div class="service-card__cost">от 2 500 〒</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    <div class="steps-to-mg__steps">
 
+                        <div class="steps-to-mg__step">
+                            <div class="ts">
+                                <div class="steps-to-mg__step-number">1</div>
+                                <div class="path">
+                                    <div class="dot dot--left"></div>
+                                    <div class="line"></div>
+                                    <div class="dot dot--right"></div>
+                                </div>
+                            </div>
+                            <div class="steps-to-mg__step-info">Заполните анкету на сайте или в мобильном приложении «Этажи», загрузите документы. Нажмите «Отправить».</div>
+                        </div>
+                        <div class="steps-to-mg__step">
+                            <div class="ts">
+                                <div class="steps-to-mg__step-number">2</div>
+                                <div class="path">
+                                    <div class="dot dot--left"></div>
+                                    <div class="line"></div>
+                                    <div class="dot dot--right"></div>
+                                </div>
+                            </div>
+                            <div class="steps-to-mg__step-info">Эксперт по ипотеке проверит анкету и запросит недостающие данные. Затем отправит заявку сразу в несколько банков.</div>
+                        </div>
+                        <div class="steps-to-mg__step">
+                            <div class="ts">
+                                <div class="steps-to-mg__step-number">3</div>
+                                <div class="path">
+                                    <div class="dot dot--left"></div>
+                                    <div class="line"></div>
+                                    <div class="dot dot--right"></div>
+                                </div>
+                            </div>
+                            <div class="steps-to-mg__step-info">Отслеживайте статус заявки в личном кабинете на сайте или в мобильном приложении «Этажи».</div>
+                        </div>
+                        <div class="steps-to-mg__step">
+                            <div class="ts">
+                                <div class="steps-to-mg__step-number">4</div>
+                                <div class="path">
+                                    <div class="dot dot--left"></div>
+                                    <div class="line"></div>
+                                    <div class="dot dot--right"></div>
+                                </div>
+                            </div>
+                            <div class="steps-to-mg__step-info">После проверки заявки банками, в личном кабинете появится информация о статусах и решениях по каждому банку.</div>
+                        </div>
+                        <div class="steps-to-mg__step">
+                            <div class="ts">
+                                <div class="steps-to-mg__step-number">5</div>
+                                <div class="path">
+                                    <div class="dot dot--left"></div>
+                                    <div class="line"></div>
+                                    <div class="dot dot--right"></div>
+                                </div>
+                            </div>
+                            <div class="steps-to-mg__step-info">Специалисты помогут выбрать недвижимость, проверят через банк, оформят оценку и страховку, зарегистрируют сделку.</div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Баннер -->
-        <div class="feedback-banner">
-            <div class="feedback-banner__bg">
-                <img src="/img/feedback-banner__bg.jpg" alt="banner">
-            </div>
-            <div class="container-fluid">
-                <div class="ac-grid">
-                    <div class="feedback-banner__main">
-                        <div class="feedback-banner__info">
-                            <div class="feedback-banner__title">
-                                <span>Подайте заявку на</span>
-                                <span>оценку имущества</span>
-                            </div>
-                            <p>
-                                <span>Оставьте заявку на консультацию или</span>
-                                <span class="mobile-div">звоните нам по телефону: <a href="#">+7 (727) 356-99-21</a></span>
-                            </p>
-                        </div>
-                        <div class="feedback-banner__form">
-                            <div class="form">
-                                <div class="form__title">Форма заполнения</div>
-                                <div class="row">
-                                    <div class="col-sm-12 col-md-6">
-                                        <input type="text" class="input" placeholder="Ваше имя" name="name">
-                                    </div>
-                                    <div class="col-sm-12 col-md-6">
-                                        <input type="text" class="input" placeholder="Ваше имя" name="phone">
-                                    </div>
-                                </div>
-                                <div class="form__submit">
-                                    <button type="submit" class="btn" name="send">Отправить</button>
-                                </div>
-                                <div class="form__info">
-                                    <p>Отправляя заявку, вы соглашаетесь на <a href="#" class="color--red">обработку персональных данных</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
+
 
     <footer class="footer">
 
@@ -728,6 +853,7 @@
 <script src="/js/components/accordion.min.js"></script>
 
 <script src="/js/main.js"></script>
-<script src="/js/pages/prop-valuation.js"></script>
+
+<script src="/js/pages/hsm.js"></script>
 </body>
 </html>

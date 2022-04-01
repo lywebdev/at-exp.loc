@@ -98,6 +98,12 @@
   text-transform: uppercase;
 }
 
+.section__title--column {
+  display: flex;
+  flex-direction: column;
+  line-height: 110%;
+}
+
 .section-p {
   margin: 10px 0;
   font-size: 20px;

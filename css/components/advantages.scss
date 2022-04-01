@@ -1,0 +1,23 @@
+.advantages {
+  padding: 100px 0;
+  background: $color-gray_lighter;
+  margin-top: 0 !important;
+}
+
+.advantage {
+
+}
+
+.advantage__title {
+  font-size: 90px;
+  color: $color-red;
+  font-weight: bold;
+}
+
+.advantage__text {
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-size: 26px;
+  display: flex;
+  flex-direction: column;
+}
