@@ -3,6 +3,29 @@
   .first-screen {
     padding: 215px 0;
   }
+
+  .task-solution__cards {
+    //padding: 0 15px;
+
+    .swiper {
+
+
+      .swiper-wrapper {
+        //padding: 15px 0;
+      }
+
+      .swiper-slide {
+        padding: 15px;
+      }
+    }
+  }
+}
+
+.service__row {
+
+  .service-card:first-child {
+    margin-bottom: 23px;
+  }
 }
 
 .about-card {
@@ -12,6 +35,7 @@
 $aboutBodyWidth: 1080px;
 
 .about-section {
+  margin-top: 110px;
 }
 
 .about-section__row {

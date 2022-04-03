@@ -6,7 +6,7 @@
 
 .ec-grid {
   max-width: 1240px;
-  margin: 0 auto;
+  margin-right: 25px;
   padding: 0 15px;
   width: 100%;
 }
@@ -16,8 +16,10 @@
 .ec-slider {
 
   .slide__bg {
+    border-radius: 25px;
 
     img {
+      border-radius: 25px;
       height: 100%;
       width: 100%;
       object-fit: cover;
@@ -278,4 +280,95 @@ $slideThumbNavItemWidth: 35px;
 
 .mortgage-selection {
   margin-top: 20px;
+}
+
+.page__ec {
+
+  .roomsSlider {
+    padding-top: 73px;
+    padding-bottom: 80px;
+    background: $color-gray_lighter;
+  }
+}
+
+
+@media screen and (max-width: 1800px) {
+  .ec-slider__main {
+    z-index: 3;
+  }
+
+  .services-section {
+
+    .swiper {
+      padding-bottom: 60px !important;
+    }
+  }
+
+  .ec-slider__main__navigation {
+    margin: 0 !important;
+    width: 100%;
+
+    .btn__item {
+      position: absolute;
+      margin: 0 !important;
+      padding: 0 !important;
+      top: calc(((547px / 2) - (45px / 2)) * (-1));
+    }
+
+    .btn__prev {
+      left: 20px;
+      //top: calc(((547px / 2) - (45px / 2)) * (-1));
+    }
+    .btn__next {
+      right: 20px;
+    }
+  }
+
+  .estate-card {
+    justify-content: unset;
+    flex-direction: column;
+
+
+    .ec-agent {
+      margin-top: 20px;
+    }
+
+    .ec-agent__image {
+      height: auto;
+    }
+  }
+
+  .ec-grid {
+    max-width: unset;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin-right: 0;
+  }
+
+  .ec-slider__thumbs__navigation {
+
+    .btn__prev {
+      margin-left: 0;
+    }
+    .btn__next {
+      margin-right: 0;
+    }
+  }
+
+  .ec-slider__thumbs__navigation {
+    top: 40px;
+  }
+
+  .ec-slider__thumbs {
+    height: 111px;
+  }
+
+  .ec-slider__thumbs__slide {
+    height: 111px;
+  }
+
+  .slide__bg {
+    height: 111px;
+  }
 }

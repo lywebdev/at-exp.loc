@@ -1,3 +1,20 @@
+.section-h1 {
+  font-size: 30px !important;
+}
+
+.page__title {
+  font-size: 35px !important;
+
+  .big {
+    font-size: 35px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .light {
+    font-size: 14px;
+  }
+}
+
 // Sortable in home page
 .first-screen__sortable--4 {
 
@@ -19,4 +36,95 @@
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+
+.about-section {
+  padding: 0 15px;
+}
+
+.about-section__row {
+  flex-direction: column;
+}
+
+
+.page__about {
+  .first-screen {
+    padding: 190px 0 !important;
+  }
+
+  .first-screen__bg {
+
+    max-height: 100%;
+  }
+
+  .about-section {
+    margin-top: 40px;
+  }
+
+  .about-section__ls {
+    margin-right: 0;
+    min-width: unset;
+  }
+
+  .about-section__rs {
+    margin-top: 25px;
+    font-size: 14px;
+  }
+
+  .task-solution {
+    padding-top: 36px;
+    padding-bottom: 40px;
+  }
+}
+
+.about-section__image {
+  height: auto;
+}
+
+.about-section__delimiter {
+  margin: 25px 0;
+  width: 100%;
+}
+
+.company-history__text {
+  width: 100%;
+}
+
+.page__service-cost {
+
+  .what-included {
+    margin-top: 36px;
+  }
+
+  .section-h1 {
+    margin-bottom: 0 !important;
+  }
+}
+
+.ec-info__row {
+  flex-direction: column;
+}
+
+.ec-info__ls,
+.ec-info__cost-container {
+  width: 100%;
+}
+
+.ec-info__location {
+  margin-top: 18px;
+}
+
+.ec-info__cost-container {
+  margin-top: 18px;
+  align-items: flex-start;
+}
+
+.page__ec {
+
+  .roomsSlider {
+    padding-top: 33px;
+    padding-bottom: 40px;
+    margin-bottom: 0 !important;
+  }
 }

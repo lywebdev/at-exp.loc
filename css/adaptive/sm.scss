@@ -178,3 +178,199 @@
 .advantage__text {
   font-size: 22px;
 }
+
+
+.form {
+}
+
+.form__title {
+  font-size: 22px;
+}
+
+.form__input {
+
+  &:not(:last-child) {
+    margin-bottom: 19px;
+  }
+}
+
+
+.page__buildings {
+
+  .breadcrumbs {
+    background: $color-gray_lighter;
+
+    .breadcrumbs__bg {
+      height: 139px;
+      z-index: 0;
+    }
+
+    .breadcrumbs__path {
+      z-index: 3;
+    }
+
+    .breadcrumbs__title {
+      z-index: 3;
+    }
+  }
+
+  .first-screen__main {
+    z-index: 3;
+  }
+
+  .main__container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .main__map-container {
+    margin-top: -270px;
+    overflow: hidden;
+  }
+
+  .main__rs {
+    margin: 0;
+    padding: 0;
+    //width: 100%;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+  }
+
+  .main__map {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    min-height: 532px;
+
+    .arrow {
+      display: none;
+    }
+  }
+
+  .room__assortment {
+    font-size: 14px;
+  }
+
+  .room__quantity {
+    font-size: 14px;
+  }
+
+  .room__address {
+    margin-bottom: 20px;
+  }
+
+  .room__btns {
+
+    .btn {
+      font-size: 18px;
+    }
+  }
+
+  .first-screen__options {
+    margin-top: 0;
+  }
+
+  .first-screen__filters {
+    margin-top: 17px;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+
+  .feedback-banner {
+    margin-top: 45px;
+  }
+}
+
+.page__service-cost {
+
+  .what-included__item {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:not(&:nth-child(1),
+    &:nth-child(2)) {
+      display: none;
+    }
+  }
+
+  .what-included {
+    margin-bottom: 40px;
+
+    .gy-4 {
+      margin: 0;
+      padding: 0 15px;
+    }
+  }
+
+  .what-included__btn {
+    margin-top: 23px;
+    display: flex;
+    justify-content: center;
+
+    .btn {
+      color: $color-black;
+      font-size: 18px;
+      width: 100%;
+    }
+  }
+
+  .why-trust {
+    padding: 36px 0 40px 0;
+
+    .ui-card__top {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .ui-card__title {
+      margin-left: 19px;
+    }
+  }
+}
+
+.section-h1 {
+  font-size: 22px !important;
+  margin-bottom: 17px !important;
+}
+
+.ui-card {
+
+  .ui-card__title {
+    font-size: 16px !important;
+  }
+}
+
+
+.ec-map {
+  height: auto;
+  width: 100%;
+}
+
+.page__ec {
+
+  .roomsSlider {
+    margin-bottom: 40px;
+  }
+}
+
+.ec-info__buttons {
+  flex-direction: column;
+
+  .ec-info__add-to-wishlist {
+    margin-bottom: 10px;
+  }
+
+  .ec-info__add-to-wishlist,
+  .ec-info__contact {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100% !important;
+  }
+}

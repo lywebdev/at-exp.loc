@@ -110,10 +110,21 @@ function initSliders() {
 
 const setMobileVersionHookFunctions = [];
 const setPcVersionHookFunctions = [];
+const resizeDeviceHookFunctions = [];
 
-
+let templates = undefined;
 const helper = {
+    options: {
+        app: {
+            version: undefined
+        }
+    },
     hooks: {
+        resize: () => {
+            for (let i = 0; i < resizeDeviceHookFunctions.length; i++) {
+                resizeDeviceHookFunctions[i].func();
+            }
+        },
         setMobileVersion: () => {
             for (let i = 0; i < setMobileVersionHookFunctions.length; i++) {
                 setMobileVersionHookFunctions[i].func();
@@ -122,6 +133,7 @@ const helper = {
             let app = document.querySelector('#app');
             app.classList.remove('pc');
             app.classList.add('mobile');
+            helper.options.app.version = 'mobile';
             // Должны вызвать функцию инициализации слайдера, передав параметр - тип девайса.
             // Мы вызываем инициализацию слайдера из этого хука.
             // В зависимости от типа девайса отдаем разную версию шаблона. Генерим мобильный из пк версии, а пкшный просто копируем
@@ -135,8 +147,14 @@ const helper = {
             let app = document.querySelector('#app');
             app.classList.remove('mobile');
             app.classList.add('pc');
+            helper.options.app.version = 'pc';
 
             initSliders();
+        },
+        setTemplates: (params) => {
+            // templates.pc     = params.pc;
+            // templates.mobile = params.mobile;
+            templates = params;
         }
     }
 };
@@ -146,7 +164,6 @@ const SCREEN_MD  = 768;
 const SCREEN_LG  = 992;
 const SCREEN_XL  = 1200;
 const SCREEN_XXL = 1400;
-
 
 document.addEventListener('DOMContentLoaded', () => {
     /**
@@ -393,10 +410,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
 
-        if (device.type === 'pc' && !headerEl.classList.contains('pc')) {
+        if (device.type === 'pc' && !document.querySelector('#app').classList.contains('pc')) {
             helper.hooks.setPcVersion();
         }
-        else if (device.type === 'mobile' && !footerEl.classList.contains('mobile')) {
+        else if (device.type === 'mobile' && !document.querySelector('#app').classList.contains('mobile')) {
             helper.hooks.setMobileVersion();
         }
 
@@ -404,6 +421,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //     helper.hooks.setMobileVersion();
         // }
 
+        helper.hooks.resize();
 
 
         header();
@@ -419,6 +437,16 @@ document.addEventListener('DOMContentLoaded', () => {
         device = initDevice();
         adaptive();
     });
+
+    // Anchors
+    let footerLiftingUpEl = document.querySelector('.footer__lifting-up');
+    footerLiftingUpEl.addEventListener('click', () => {
+        document.querySelector('.header').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+
 
     window.addEventListener('click', (e) => {
         // header hamburger

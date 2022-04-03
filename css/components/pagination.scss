@@ -1,0 +1,44 @@
+.pagination {
+
+  .page-item {
+    outline: none;
+    border: none;
+
+    :focus, :active {
+      outline: none;
+      border: none;
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &.active {
+
+      .page-link {
+        background: $color-red;
+        color: #fff;
+      }
+    }
+  }
+
+  .page-link {
+    color: $color-black;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px !important;
+    outline: none;
+    border: none;
+    box-shadow: 0 4px 12px 3px rgba(0,0,0,0.1);
+    font-size: 20px;
+    font-weight: bold;
+
+    :focus, :active {
+      outline: none;
+      border: none;
+    }
+  }
+}

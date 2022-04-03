@@ -1,4 +1,4 @@
-let serviceSectionContainer = document.querySelector('.services-section');
+let serviceSectionContainer = document.querySelector('.task-solution');
 
 let serviceSection = {
     pc: serviceSectionContainer.innerHTML
@@ -19,7 +19,7 @@ serviceSectionMobileTemplate = (`
             </div>
         </div>
     </div>
-    <div class="services-section__cards">
+    <div class="task-solution__cards">
     <div class="swiper">
     <div class="swiper-wrapper">
 `);
@@ -57,11 +57,10 @@ helper.hooks.setTemplates({
     }
 });
 
-
 let setMobile = {
     func: () => {
         serviceSectionContainer.innerHTML = templates.mobile.about;
-        let sl = document.querySelector('.services-section__cards .swiper');
+        let sl = document.querySelector('.task-solution__cards .swiper');
         let sliderInit = new Swiper(sl, {
             slidesPerView: 1,
             spaceBetween: 15
@@ -75,61 +74,9 @@ let setPc = {
     }
 };
 
-
-
-
-
-
-let setted = {
-    mobile: false,
-    pc: false
-};
-
-let resizeFunctions = {
-    func: () => {
-        if (device.width <= 1800) {
-            if (!setted.mobile) {
-                let acAgentEl = document.querySelector('.ec-agent');
-                let acAgentClone = acAgentEl.cloneNode(1);
-                document.querySelector('.ec-grid').insertBefore(acAgentClone, document.querySelector('.ec-desc.mortgage-selection'));
-                acAgentEl.parentNode.removeChild(acAgentEl);
-                setted.pc = false;
-            }
-        }
-        else {
-            if (!setted.pc) {
-                let acAgentEl = document.querySelector('.ec-agent');
-                let acAgentClone = acAgentEl.cloneNode(1);
-                document.querySelector('.estate-card').appendChild(acAgentClone);
-                acAgentEl.parentNode.removeChild(acAgentEl);
-                setted.mobile = false;
-            }
-        }
-    }
-}
-
 setMobileVersionHookFunctions.push(setMobile);
 setPcVersionHookFunctions.push(setPc);
-resizeDeviceHookFunctions.push(resizeFunctions);
 
 document.addEventListener('DOMContentLoaded', () => {
-    const thumbsSlider = new Swiper('.ec-slider__thumbs .swiper', {
-        slidesPerView: 5,
-        spaceBetween: 20,
-        navigation: {
-            nextEl: document.querySelector('.ec-slider__thumbs__navigation .btn__next'),
-            prevEl: document.querySelector('.ec-slider__thumbs__navigation .btn__prev'),
-        },
-    });
 
-    const mainSlider = new Swiper('.ec-slider__main .swiper', {
-        slidesPerView: 1,
-        navigation: {
-            nextEl: document.querySelector('.ec-slider__main__navigation .btn__next'),
-            prevEl: document.querySelector('.ec-slider__main__navigation .btn__prev'),
-        },
-        thumbs: {
-            swiper: thumbsSlider,
-        },
-    });
 });
