@@ -90,6 +90,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 pagination: {
                     el: pagination,
                     // dynamicBullets: true,
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 20,
+                        centeredSlides: true
+                    },
+                    575: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    800: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    }
                 }
             });
         }
@@ -104,6 +123,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     hide: false,
                     draggable: true,
                 },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1.1,
+                        centeredSlides: true
+                    },
+                    800: {
+                        slidesPerView: 2,
+                    },
+                    1000: {
+                        slidesPerView: 3,
+                    },
+                    1200: {
+
+                    }
+                }
             });
         }
     }

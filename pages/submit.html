@@ -11,9 +11,7 @@
 </head>
 <body>
 <div id="app">
-
     <header class="header">
-
         <div class="header-topbar container-fluid">
 
             <div class="ac-grid f ai-c jc-sb">
@@ -105,7 +103,7 @@
         </div>
         <div class="header-main container-fluid">
 
-            <div class="ac-grid f ai-c">
+            <div class="ac-grid f ai-c jc-sb">
 
                 <a href="/" class="header__logo logo">
                     <svg width="169" height="34" viewBox="0 0 169 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -187,7 +185,6 @@
             </div>
 
         </div>
-
     </header>
 
     <div id="content" class="page__app-submission">
@@ -212,7 +209,7 @@
                     <div class="section__title">Информация</div>
 
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-lg-12 col-xl-6">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="sortable-section first-screen__sortable">
@@ -283,11 +280,11 @@
                                             <label class="form-label">Общая площадь, м2</label>
                                             <input type="text" class="input" name="area" value="54" placeholder="Укажите площадь">
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-md-2 col-sm-6">
                                             <label for="floor" class="form-label">Этаж</label>
                                             <input type="text" class="input" value="7" name="floor" id="floor" placeholder="Укажите этаж">
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-md-2 col-sm-6">
                                             <label class="form-label">Этажность</label>
                                             <input type="text" class="input" value="1" placeholder="Укажите этажность">
                                         </div>
@@ -344,7 +341,7 @@
                             </div>
 
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-lg-12 col-xl-6">
                             <div class="mark-on-the-map">
                                 <p class="mark-on-the-map__info">Указать место на карте</p>
                                 <div class="mark-on-the-map__map">
@@ -365,14 +362,14 @@
 
                         <div class="photo-gallery mt-25">
                             <div class="row">
-                                <div class="col-md-4 photo-gallery__main">
+                                <div class="col-md-4 col-sm-12 photo-gallery__main">
                                     <div class="photo-gallery__image">
                                         <img src="/img/photo-gallery/1.jpg" alt="1">
                                     </div>
                                 </div>
-                                <div class="col-md-8 photo-gallery__images">
+                                <div class="col-md-8 col-sm-12 photo-gallery__images">
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 col-sm-6">
                                             <div class="photo-gallery__image">
                                                 <div class="photo-galley__load-btn">
                                                     <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -382,7 +379,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 col-sm-6">
                                             <div class="photo-gallery__image">
                                                 <img src="/img/photo-gallery/1.jpg" alt="1">
                                             </div>
@@ -443,6 +440,12 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="add-photo btn btn--gray">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 0C15.514 0 20 4.48599 20 10C20 15.514 15.514 20 10 20C4.48599 20 0 15.514 0 10C0 4.48595 4.48599 0 10 0ZM10 18.75C14.8247 18.75 18.75 14.8247 18.75 10C18.75 5.17525 14.8247 1.25 10 1.25C5.17525 1.25 1.25001 5.17522 1.25001 10C1.25001 14.8247 5.17525 18.75 10 18.75ZM4.4531 10C4.4531 10.3452 4.73295 10.625 5.07811 10.625H9.375V14.9219C9.375 15.2671 9.65484 15.5469 10 15.5469C10.3452 15.5469 10.625 15.2671 10.625 14.9219V10.625H14.9219C15.2671 10.625 15.5469 10.3452 15.5469 10C15.5469 9.6548 15.2671 9.375 14.9219 9.375H10.625V5.07811C10.625 4.73291 10.3452 4.4531 10 4.4531C9.65484 4.4531 9.375 4.73291 9.375 5.07811V9.375H5.07811C4.73295 9.375 4.4531 9.65484 4.4531 10Z" fill="#7A7A87"/>
+                                </svg>
+                                <span>Добавить фото</span>
                             </div>
                         </div>
 

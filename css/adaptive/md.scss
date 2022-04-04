@@ -128,3 +128,224 @@
     margin-bottom: 0 !important;
   }
 }
+
+.page__franchise {
+
+  .first-screen__form {
+    max-width: unset;
+  }
+
+  .condition-item__title {
+    font-size: 28px;
+  }
+
+  .condition-item__info {
+    font-size: 14px;
+  }
+
+  .conditions {
+    margin-top: unset;
+    height: auto;
+    padding-top: 40px;
+    background: $color-gray_lighter;
+
+    .col-md-4 {
+      margin-bottom: 15px;
+    }
+  }
+
+  .safely {
+    .stats__row {
+      flex-direction: column;
+    }
+
+    .stat-item--cities {
+      margin-left: auto;
+      margin-top: 0 !important;
+    }
+
+    .stat-item__employee {
+      align-items: flex-start !important;
+    }
+
+    .stat-item {
+
+      .high {
+        font-size: 60px !important;
+      }
+
+      .text {
+        font-size: 25px !important;
+      }
+    }
+  }
+
+  .what-you-get {
+    padding-bottom: 40px !important;
+  }
+
+  .office-slider {
+    margin-top: unset;
+    padding: 40px 0;
+  }
+
+  .office-slider__container {
+    padding: 0 15px !important;
+
+    .office-image {
+      height: 100%;
+    }
+
+    .slider-nav {
+      display: none;
+    }
+
+    .swiper-slide {
+      height: 170px;
+    }
+
+    .swiper {
+      padding: 0 !important;
+      //padding: 0 15px !important;
+    }
+  }
+
+  .statistic {
+    margin-bottom: 30px;
+  }
+}
+
+.agents-section {
+  margin-top: unset !important;
+  padding: 35px 0;
+}
+
+.section-reviews {
+
+  .btn {
+    display: none;
+  }
+}
+
+.page__hsm {
+
+  .select-row {
+    margin-bottom: 21px;
+  }
+
+  .mgg-select__banks {
+  }
+}
+
+.page__prop-valuation {
+
+  .first-screen__bg {
+    height: 100% !important;
+  }
+
+  .first-screen {
+    padding: 36px 0;
+  }
+
+  .first-screen__form {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .types-eval-in-company {
+    padding-top: 36px;
+    margin-top: 50px;
+    padding-bottom: 40px;
+
+    .section__title {
+      text-align: center;
+    }
+  }
+}
+
+.page__sale {
+
+  .first-screen__bg {
+    height: 100% !important;
+  }
+
+  .first-screen__form {
+    max-width: 100%;
+  }
+
+  .first-screen__form-row {
+    flex-direction: column;
+
+    .input {
+      max-width: 100%;
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .how-it-work {
+    margin: 36px 0;
+  }
+
+  .ui-card__top {
+    flex-direction: row;
+    margin-bottom: 14px;
+    align-items: center;
+  }
+
+  .ui-card__icon {
+    margin-bottom: 0;
+  }
+
+  .ui-card__title {
+    margin-left: 19px;
+    margin-bottom: 0;
+  }
+
+  .info-banner {
+    margin-top: 40px;
+    padding: 0 0 40px 0;
+    background: $color-gray_lighter;
+  }
+
+  .info-banner__bg {
+    position: static;
+  }
+
+  .info-banner__text {
+    font-size: 14px;
+    text-transform: unset;
+  }
+
+  .info-banner__btns {
+
+    .btn {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      width: 100% !important;
+      text-align: center;
+    }
+  }
+
+  .info-banner__wrapper {
+    padding: 0 15px;
+  }
+
+  .info-banner__title {
+    font-size: 22px;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+
+    span {
+
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+  }
+}

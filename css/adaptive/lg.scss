@@ -339,3 +339,182 @@
     padding-right: 15px;
   }
 }
+
+.page__franchise {
+
+  .safely {
+
+    .section__title--column {
+      flex-direction: row;
+
+      span {
+        &:not(:last-child) {
+          margin-right: 12px;
+        }
+      }
+    }
+
+    .stats__row {
+      justify-content: flex-start;
+    }
+
+    .stat-item__employee {
+      margin-top: 10px !important;
+    }
+
+    .ac-grid {
+
+      >.row {
+        >.col-md-3 {
+          width: 100%;
+        }
+
+        >.col-md-9 {
+          width: 100%;
+        }
+      }
+    }
+
+    .safely-map {
+      margin-left: 0;
+      margin-top: 50px;
+    }
+
+    .stat-item--cities {
+      margin-left: 70px;
+    }
+  }
+}
+
+#app.mobile {
+
+  .agents-section {
+    .swiper {
+      padding: 0 15px !important;
+    }
+  }
+
+  .section-reviews {
+    .swiper {
+      padding: 0 15px !important;
+    }
+    .swiper-scrollbar {
+      width: calc(100% - 30px) !important;
+      box-sizing: border-box;
+      bottom: -2px;
+    }
+  }
+}
+
+.agents-section {
+
+  .collections-section__container {
+    padding: 0 !important;
+  }
+
+  .agents-section__slider-nav {
+    display: none;
+  }
+}
+
+.section-reviews {
+
+  .swiper-scrollbar {
+
+  }
+
+
+
+  .section-slider__container {}
+
+  .swiper-scrollbar {}
+}
+
+.page__hsm {
+
+  .preview {
+    padding: 75px 0;
+  }
+
+  .preview__title {
+    font-size: 30px;
+  }
+
+  .preview__info {
+    font-size: 20px;
+  }
+}
+
+.steps-to-mg {
+
+  .steps-to-mg__steps {
+    flex-direction: column;
+  }
+
+  .steps-to-mg__step {
+    display: flex;
+    align-items: center;
+
+    .ts {
+      flex-direction: row-reverse;
+      width: auto;
+    }
+
+    .path {
+      flex-direction: column;
+      width: auto;
+      margin-right: 20px;
+      margin-left: 0;
+      height: 100%;
+
+      .line {
+        width: 1px;
+        min-height: 50px;
+        height: 100%;
+      }
+    }
+
+    .dot--right {
+      display: none;
+    }
+
+    .steps-to-mg__step-info {
+      flex-grow: 1;
+      margin-left: 15px;
+    }
+  }
+}
+
+.page__prop-valuation {
+
+  .first-screen {
+    padding: 50px 0;
+  }
+
+  .first-screen__wrapper {
+    max-width: 100%;
+  }
+
+  .first-screen__form {
+    max-width: 100%;
+  }
+
+  .page__title {
+    font-size: 30px;
+  }
+
+  .page__text {
+    font-size: 20px;
+  }
+}
+
+.page__app-submission {
+}
+
+.mark-on-the-map__info {
+  display: none;
+}
+
+.mark-on-the-map__map {
+  margin-top: 30px;
+}

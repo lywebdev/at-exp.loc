@@ -7,6 +7,11 @@
     font-size: 18px;
   }
 
+  .add-photo,
+  .add-layout {
+    display: none !important;
+  }
+
   .col-padding {
     margin-top: auto;
   }
@@ -17,11 +22,6 @@
 
   .sortable-section {
     margin-bottom: 38px;
-  }
-
-  .add-layout {
-    margin-top: 19px;
-    display: none !important;
   }
 }
 

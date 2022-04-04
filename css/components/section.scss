@@ -15,6 +15,13 @@
   }
 }
 
+@media screen and (max-width: 1740px) {
+  .swiper-scrollbar {
+    width: calc(100% - 30px) !important;
+    box-sizing: border-box;
+  }
+}
+
 // Выгоды
 .section-benefits {
   padding-top: calc(45px + 75px);
