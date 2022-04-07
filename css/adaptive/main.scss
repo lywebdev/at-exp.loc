@@ -1,3 +1,5 @@
+// В стандартных браузерах верхняя панель + панель значков занимает ~120px
+
 @media screen and (min-width: 1px) and (max-width: 1780px) {
   .breadcrumbs {
 
@@ -58,3 +60,6 @@
     }
   }
 }
+
+
+@import 'height-fix';

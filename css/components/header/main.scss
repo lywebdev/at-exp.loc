@@ -72,3 +72,13 @@
     margin-right: 10px;
   }
 }
+
+
+@media screen and (max-width: 1760px) {
+  .header__nav-item {
+
+    &:not(:last-child) {
+      margin-right: 20px !important;
+    }
+  }
+}

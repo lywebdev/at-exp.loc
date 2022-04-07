@@ -1,0 +1,41 @@
+@media screen and (max-height: calc(1024px - 120px)) {
+
+  .first-screen {
+
+    .first-screen__main {
+
+      .selling-text {
+        margin-top: 50px;
+
+        .paragraph {
+          font-size: 18px;
+        }
+
+        .page-title {
+          font-size: 42px;
+        }
+      }
+    }
+
+    .nav-menu__item:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    .nav-menu {
+      margin: 30px 0 25px 0;
+    }
+  }
+
+  .first-screen__ads-number {
+    padding: 15px 20px;
+    min-height: auto;
+
+    .card-info__header {
+      font-size: 20px;
+    }
+
+    .card-info__info {
+      font-size: 14px;
+    }
+  }
+}
