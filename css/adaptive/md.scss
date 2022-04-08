@@ -349,3 +349,59 @@
     }
   }
 }
+
+.page__home {
+
+  .section-benefits {
+
+    .section-slider-pagination {
+      display: flex;
+    }
+  }
+
+  .services-section {
+
+    .swiper {
+      padding-bottom: 15px !important;
+    }
+
+    .section-slider-pagination {
+      margin-top: 15px;
+    }
+  }
+}
+
+.estate-card {
+
+  .slide__overlay {
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+.page__app-submission {
+
+  .btn--gray {
+    margin-bottom: 24px;
+  }
+
+  .app-submission__options {
+    .ac-text {
+      padding: 0 !important;
+    }
+
+    .app-submission__option-section {
+      margin-bottom: 0;
+    }
+  }
+
+  .app-submission__options__toggle-btn {
+    margin-bottom: 25px;
+  }
+
+  .app-submission__row {
+    margin-bottom: 0;
+  }
+}

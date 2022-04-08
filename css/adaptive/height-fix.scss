@@ -39,3 +39,44 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+
+  .page__about {
+
+    .first-screen {
+      padding: 100px 0 !important;
+
+      .page__title {
+
+        .big {
+          font-size: 50px;
+          margin-bottom: 20px;
+        }
+        .light {
+          font-size: 36px;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+
+  .page__prop-valuation {
+
+    .first-screen__wrapper {
+
+      .page__text {
+        line-height: 150%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page__about {
+
+    .first-screen {
+      padding: 175px 0 !important;
+    }
+  }
+}

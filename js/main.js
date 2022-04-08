@@ -1,5 +1,33 @@
+/***********************************************************************************************************************
+ *
+ * --- RU: Этот файл является "точкой входа" для всех последующий JS файлов. Файл должен быть подключен на каждой странице
+ * клиентской части приложения. Для того чтобы не регистрировать бесконечное множество листенеров для событий, все они
+ * будут сосредоточены в предопределённых объектах. Реализован функционал хуков, для таких событий как
+ * DOMContentLoaded, window.resize, document.click, чтобы также избежать зависаний на фронтэнде. Логика следующая:
+ * для разных событий есть предопределённая переменная, в которую записываются массив с объектами, которые затем
+ * перебираются в хэлпере "helpers.hooks". Таким образом, из любого файла JS мы можем прокинуть "наверх" данные, которые
+ * хотим определить в глобальной области видимости в контексте текущей страницы. По схожей логике устроены фреймворки
+ * Angular, React, Vue, здесь более упрощённый вариант.
+ * Разбиение на компоненты отстутствует, в силу малого количества JS кода, а также его документируемости.
+ * ---------------------------------------------------------------------------------------------------------------------
+ * --- EN: This file is the "entry point" for all subsequent JS files. The file must be connected on every page
+ * of the client part of the application. In order not to register an infinite number of listeners for events, they will all
+ * be concentrated in predefined objects. Implemented the functionality of hooks, for events such as
+ * DOMContentLoaded, window.resize, document.click to also avoid freezes on the frontend. The logic is as follows:
+ * for different events, there is a predefined variable in which an array with objects is written, which then
+ * they move to the helpers "helpers.hooks". Thus, from any JS file, we can throw up the data that
+ * we want to define in the global scope in the context of the current page. Frameworks are arranged according to a
+ * similar logic Angular, React, Vue, here is a more simplified version.
+ * There is no division into components, due to the small amount of JS code, as well as its documentability.
+ *
+ *
+ * @author {Kulik Leonid}
+ **********************************************************************************************************************/
+
+
+let $app = document.querySelector('#app');
 // Global vars
-var device   = undefined;
+var device = undefined;
 
 const listeners = {
 };
@@ -111,6 +139,7 @@ function initSliders() {
 const setMobileVersionHookFunctions = [];
 const setPcVersionHookFunctions = [];
 const resizeDeviceHookFunctions = [];
+const DOMLoadedFunctions = [];
 
 let templates = undefined;
 const helper = {
@@ -120,6 +149,11 @@ const helper = {
         }
     },
     hooks: {
+        DOMContentLoaded: () => {
+            DOMLoadedFunctions.map((functionObject, index) => {
+                functionObject.call(functionObject.params);
+            });
+        },
         resize: () => {
             for (let i = 0; i < resizeDeviceHookFunctions.length; i++) {
                 resizeDeviceHookFunctions[i].func();
@@ -152,8 +186,6 @@ const helper = {
             initSliders();
         },
         setTemplates: (params) => {
-            // templates.pc     = params.pc;
-            // templates.mobile = params.mobile;
             templates = params;
         }
     }
@@ -166,6 +198,7 @@ const SCREEN_XL  = 1200;
 const SCREEN_XXL = 1400;
 
 document.addEventListener('DOMContentLoaded', () => {
+    helper.hooks.DOMContentLoaded();
     /**
      * Dropdown
      */
@@ -291,16 +324,15 @@ document.addEventListener('DOMContentLoaded', () => {
         let headerEl = document.getElementsByClassName('header')[0];
         let footerEl = document.getElementsByClassName('footer')[0];
 
-        const header = () => {
-            if (device.type === 'pc' && !headerEl.classList.contains('pc')) {
+        const header = {
+            setPc: () => {
                 headerEl.classList.remove('mobile');
-
 
                 headerEl.outerHTML = templates.pc.header;
                 headerEl.classList.add('pc');
                 dropdownsInit();
-            }
-            else if (device.type === 'mobile' && !headerEl.classList.contains('mobile')) {
+            },
+            setMobile: () => {
                 headerEl.classList.remove('pc');
 
                 if (!templates.mobile.header) {
@@ -341,11 +373,11 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="header-mobile__overlay-location">
                                 ${locationEl.outerHTML}
                             </div>
-                            <div class="header-mobile__overlay-nav">
-                                ${navEl.outerHTML}
-                            </div>
                             <div class="header-mobile__overlay-communication">
                                 ${communicationEl.outerHTML}
+                            </div>
+                            <div class="header-mobile__overlay-nav">
+                                ${navEl.outerHTML}
                             </div>
                         </div>
                     </header>
@@ -359,17 +391,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 hamburgerInit();
                 dropdownsInit();
             }
-        }
+        };
 
-        const footer = () => {
-            if (device.type === 'pc' && !footerEl.classList.contains('pc')) {
+        const footer = {
+            setPc: () => {
                 footerEl.classList.remove('mobile');
-
 
                 footerEl.outerHTML = templates.pc.footer;
                 footerEl.classList.add('pc');
-            }
-            else if (device.type === 'mobile' && !footerEl.classList.contains('mobile')) {
+            },
+            setMobile: () => {
                 footerEl.classList.remove('pc');
 
                 if (!templates.mobile.footer) {
@@ -402,37 +433,32 @@ document.addEventListener('DOMContentLoaded', () => {
                     templates.mobile.footer = template;
                 }
 
-
                 footerEl.outerHTML = templates.mobile.footer;
                 footerEl.classList.add('mobile');
                 let accordion = new Accordion('.footer .accordion-container');
             }
-        }
-
+        };
 
         if (device.type === 'pc' && !document.querySelector('#app').classList.contains('pc')) {
+            header.setPc();
+            footer.setPc();
             helper.hooks.setPcVersion();
         }
         else if (device.type === 'mobile' && !document.querySelector('#app').classList.contains('mobile')) {
+            header.setMobile();
+            footer.setMobile();
             helper.hooks.setMobileVersion();
         }
 
-        // if (device.width <= 767) {
-        //     helper.hooks.setMobileVersion();
-        // }
 
         helper.hooks.resize();
-
-
-        header();
-        footer();
     }
     adaptive();
 
 
-    /**
+    /*******************************************************************************************************************
      * Document Events Listeners
-     */
+     ******************************************************************************************************************/
     window.addEventListener('resize', (event) => {
         device = initDevice();
         adaptive();
@@ -449,7 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     window.addEventListener('click', (e) => {
-        // header hamburger
+        // Header hamburger
         if (device.type === 'mobile') {
             let container = document.getElementsByClassName('header-mobile')[0];
             let menu = document.getElementsByClassName('header-mobile__main')[0];

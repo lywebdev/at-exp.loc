@@ -363,16 +363,62 @@
 
 .page__ec {
 
+  .ec-options__row {
+    flex-direction: column;
+  }
+
+  .ec-options__col {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .services-section {
+
+    .swiper {
+      padding-bottom: 15px !important;
+    }
+  }
+
+  .ec-desc {
+    padding: 25px 20px;
+  }
+
   .roomsSlider {
     margin-bottom: 40px;
+  }
+
+  .ec-info {
+    padding: 25px 20px;
+  }
+
+  .ec-info__name {
+    font-size: 25px;
+  }
+
+  .ec-info__location {
+    font-size: 14px;
+
+    svg {
+    }
+  }
+
+  .ec-info__cost {
+    font-size: 35px;
   }
 }
 
 .ec-info__buttons {
-  flex-direction: column;
+  flex-direction: column-reverse;
 
   .ec-info__add-to-wishlist {
-    margin-bottom: 10px;
+    margin-top: 10px;
+
+    .btn {
+      justify-content: center;
+    }
   }
 
   .ec-info__add-to-wishlist,
@@ -589,6 +635,20 @@
     margin-top: 19px;
   }
 
+  .photo-gallery {
+
+    .sortableContainer {
+
+      .col-sm-6 {
+        width: 50%;
+      }
+    }
+
+    .photo-gallery__layout {
+      width: 100%;
+    }
+  }
+
   .photo-gallery__images {
     margin-top: 19px;
 
@@ -616,6 +676,54 @@
         }
       }
 
+    }
+  }
+}
+
+#app.mobile .section-benefits .swiper {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+.section-benefits {
+
+  .section__card__title {
+    font-size: 16px;
+  }
+
+  .section__card__btn {
+    font-size: 14px !important;
+  }
+
+  .section-slider__container {
+    max-width: unset;
+    width: 100%;
+  }
+
+  .section__card {
+    min-width: unset;
+    max-width: unset;
+    width: 100%;
+  }
+}
+
+.feedback-banner {
+
+  .input {
+    margin-bottom: 0;
+  }
+
+  //.form__input:not(:last-child) {
+  //  margin-bottom: 19px;
+  //}
+
+  .form__submit {
+    padding: 0;
+    width: 100%;
+    margin-top: 20px;
+
+    button {
+      width: 100%;
     }
   }
 }

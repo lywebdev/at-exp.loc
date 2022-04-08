@@ -168,6 +168,66 @@ $slideThumbNavItemWidth: 35px;
 
   .ec-desc {
     margin-bottom: 20px;
+    position: relative;
+    transition: all 0.4s;
+
+    .ec-desc__text {
+      //height: 100%;
+      max-height: unset;
+      transition: all 0.4s;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 1;
+        box-shadow: 0px -61px 30px -35px rgba(255, 255, 255, 0) inset;
+        transition: all 0.4s;
+      }
+    }
+
+    &.collapsed {
+
+      .ec-desc__text {
+        height: 75px;
+        max-height: 75px;
+        overflow: hidden;
+        position: relative;
+
+        &:before {
+          opacity: 1;
+          visibility: visible;
+          box-shadow: 0px -61px 30px -35px rgba(255, 255, 255, 0.61) inset;
+        }
+      }
+
+      .btn-read-more {
+
+
+        svg {
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    .btn-read-more {
+      box-sizing: border-box;
+      width: 100%;
+      margin-top: 0;
+      padding-bottom: 0;
+      //padding-top: 0;
+      transition: all 0.4s;
+
+      svg {
+        transform: rotate(180deg);
+        transition: all 0.3s;
+      }
+    }
   }
 
   .section {
@@ -240,7 +300,7 @@ $slideThumbNavItemWidth: 35px;
 
 .ec-agent__image {
   width: 100%;
-  height: 235px;
+  //height: 235px;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
   overflow: hidden;

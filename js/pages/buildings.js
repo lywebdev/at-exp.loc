@@ -31,10 +31,3 @@ const roomSizeSelect = new Select('.select.roomSize-select', {
         console.log('Выбранная комнатность: ', item)
     }
 });
-
-
-// const benefitsSlider = new Swiper();
-
-
-document.addEventListener('DOMContentLoaded', () => {
-});
